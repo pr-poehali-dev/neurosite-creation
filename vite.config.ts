@@ -19,7 +19,11 @@ export default defineConfig({
     port: 5173,
     allowedHosts: true,
     hmr: {
-      overlay: false // Disables the error overlay if you only want console errors
+      // Исправление проблемы WebSocket соединения
+      clientPort: 443,
+      host: 'preview--neurosite-creation.poehali.dev',
+      protocol: 'wss',
+      overlay: false
     }
   },
 });
